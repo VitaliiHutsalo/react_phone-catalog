@@ -1,0 +1,14 @@
+@import '../../../App.scss';
+
+.recomendation {
+  grid-column: 1 / -1;
+  margin-right: -16px;
+
+  @include on-tablet {
+    margin-right: -24px;
+  }
+
+  @include on-desktop {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../../../../App.scss';
+
+.pageSelectButton {
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-surface);
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-element);
+  }
+
+  &Selected {
+    background-color: var(--color-accent);
+  }
+}

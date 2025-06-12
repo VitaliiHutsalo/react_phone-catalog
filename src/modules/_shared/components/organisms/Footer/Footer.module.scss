@@ -1,0 +1,91 @@
+@import '../../../../../App.scss';
+
+.footer {
+  border-top: 1px solid grey;
+  background-color: var(--color-bg);
+  padding-block: 32px;
+  height: 257px;
+  box-sizing: border-box;
+  width: 100%;
+  position: sticky;
+  top: 100%;
+
+  @include on-tablet {
+    height: 96px;
+  }
+
+  &Container {
+    @include content-padding-in-line();
+    @include grid-layout;
+    row-gap: 32px;
+  }
+
+  &Logo {
+    display: flex;
+    grid-column: 1/-1;
+
+    @include on-tablet {
+      grid-column: 1/4;
+    }
+
+    @include on-desktop {
+      grid-column: 1/8;
+    }
+
+    &Icon {
+      @include img-hover-scale(1.1);
+    }
+  }
+
+  &NavContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    row-gap: 16px;
+    grid-column: 1/-1;
+
+    @include on-tablet {
+      flex-direction: row;
+      align-items: center;
+      grid-column: 4/10;
+    }
+
+    @include on-desktop {
+      grid-column: 8/17;
+      justify-content: space-between;
+    }
+
+    &Link {
+      color: var(--color-text-main);
+      text-decoration: none;
+      list-style: none;
+    }
+  }
+
+  &BackContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    gap: 16px;
+    grid-column: 1/-1;
+
+    @include on-tablet {
+      grid-column: 10/-1;
+      justify-content: flex-end;
+    }
+
+    @include on-desktop {
+      grid-column: 17/-1;
+    }
+
+    &Text {
+      color: var(--color-text-secondary);
+    }
+
+    &Button {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

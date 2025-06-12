@@ -1,0 +1,29 @@
+@import './../../../../../App.scss';
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  font-weight: 700;
+
+  @include on-tablet {
+    margin-bottom: 40px;
+  }
+
+  &Link {
+    color: var(--color-text-main);
+  }
+
+  &Separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
+    rotate: 180deg;
+  }
+
+  &Current {
+    color: var(--color-text-secondary);
+  }
+}

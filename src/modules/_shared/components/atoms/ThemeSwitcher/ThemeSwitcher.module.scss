@@ -1,0 +1,22 @@
+@use '../../../../../App.scss' as *;
+
+.themeSwitcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  width: 48px;
+  height: 100%;
+  box-shadow: -1px 0 0 0 var(--color-element);
+  text-decoration: none;
+
+  @include on-desktop {
+    width: 64px;
+  }
+
+  &Icon {
+    height: 24px;
+    width: 24px;
+  }
+}

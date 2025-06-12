@@ -1,0 +1,40 @@
+@use '../../../../../App.scss' as *;
+
+.carouselHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 16px;
+
+  @include on-tablet {
+    padding-right: 24px;
+  }
+
+  @include on-desktop {
+    padding-right: 0;
+  }
+}
+
+.carouselNavButtons {
+  display: flex;
+  gap: 16px;
+}
+
+.arrowButtonWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.swiperSlide {
+  height: 540px;
+
+  @include on-tablet {
+    height: 570px;
+  }
+
+  display: flex;
+  align-items: center;
+}

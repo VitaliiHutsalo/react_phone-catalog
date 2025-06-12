@@ -1,10 +1,23 @@
 {
   "extends": "@mate-academy/students-ts-config",
   "include": [
-    "src"
+    "src",
+    ".eslintrc.js"
   ],
   "compilerOptions": {
+    "jsx": "react-jsx",
     "sourceMap": false,
-    "types": ["node", "cypress"]
+    "types": ["node"],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    "baseUrl": "src",
+    "paths": {
+      "@assets/*": ["assets/*"],
+      "@constants/*": ["constants/*"],
+      "@hooks/*": ["hooks/*"],
+      "@styles/*": ["styles/*"],
+      "@models/*": ["types/*"],
+    }
   }
 }

@@ -1,0 +1,45 @@
+@import '../../../App.scss';
+
+.tech {
+  grid-column: 1 / -1;
+  margin-bottom: 56px;
+
+  @include on-tablet {
+    margin-bottom: 64px;
+  }
+
+  @include on-desktop {
+    grid-column: 14 / -1;
+    margin-bottom: 80px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  &Head {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &Main {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 0;
+
+    &Text {
+      display: flex;
+      justify-content: space-between;
+      color: var(--color-text-secondary);
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    &Text span {
+      color: var(--color-text-main);
+    }
+  }
+}

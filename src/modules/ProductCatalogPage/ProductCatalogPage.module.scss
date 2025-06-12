@@ -1,0 +1,107 @@
+@import '../../App.scss';
+
+.catalogPage {
+  @include content-padding-in-line();
+  @include grid-layout;
+  margin-top: 24px;
+  margin-bottom: 64px;
+
+  @include on-desktop {
+    margin-bottom: 80px;
+  }
+
+  &List {
+    grid-column: 1/-1;
+  }
+
+  &Quantity {
+    margin-bottom: 16px;
+    grid-column: 1/-1;
+
+    @include on-tablet {
+      margin-bottom: 24px;
+    }
+
+    &Title {
+      margin-bottom: 8px;
+    }
+
+    &Items {
+      color: var(--color-text-secondary);
+    }
+  }
+
+  &Sort {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 8px;
+    grid-column: 1/-1;
+
+    &By {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      width: 100%;
+      min-width: 128px;
+      max-width: 136px;
+
+      &Text {
+        color: var(--color-text-secondary);
+      }
+    }
+  }
+
+  .isWide {
+    max-width: 187px;
+  }
+
+  &Switch {
+    margin-top: 8px;
+    grid-column: 1 / -1;
+    justify-self: center;
+
+    &Buttons {
+      display: flex;
+      gap: 16px;
+      height: 32px;
+
+      &Arrow {
+        width: 32px;
+      }
+
+      &Page {
+        display: flex;
+        gap: 8px;
+
+        button {
+          width: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          aspect-ratio: 1 / 1;
+          padding: 0;
+        }
+
+        .paginationDots {
+          width: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          pointer-events: none;
+          user-select: none;
+          color: #888;
+        }
+      }
+    }
+  }
+}
+
+.slideInLeft {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+.slideInLeftActive {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 1s ease;
+}

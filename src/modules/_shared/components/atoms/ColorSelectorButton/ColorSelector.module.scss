@@ -1,0 +1,29 @@
+@import '../../../../../App.scss';
+
+.colorSelector {
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--color-element);
+  border-radius: 50%;
+  padding: 2px;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &:hover {
+    border-color: var(--color-text-secondary);
+  }
+
+  &:disabled {
+    border-color: var(--color-text-main);
+    cursor: default;
+  }
+
+  &Link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  //need container with not inline display
+}

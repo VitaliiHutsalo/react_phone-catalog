@@ -1,0 +1,98 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+html {
+  font-family: 'Mont', sans-serif;
+  scroll-behavior: smooth;
+  background-color: var(--color-bg);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0;
+  color: var(--color-text-main);
+}
+
+button {
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 41px;
+  letter-spacing: -0.01em;
+
+  @include on-tablet {
+    font-size: 48px;
+    line-height: 56px;
+  }
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 31px;
+  letter-spacing: 0;
+
+  @include on-tablet {
+    font-size: 32px;
+    line-height: 41px;
+    letter-spacing: -0.01em;
+  }
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0;
+
+  @include on-tablet {
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 31px;
+  }
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+
+  @include on-tablet {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.uppercase {
+  font-family: 'Mont', sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.buttonText {
+  font-family: 'Mont', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0;
+}
+
+.smallText {
+  font-family: 'Mont', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100dvh;
+}

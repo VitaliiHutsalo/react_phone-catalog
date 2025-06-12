@@ -1,0 +1,36 @@
+@import '../../../../../App.scss';
+
+.back {
+  border: none;
+  height: 16px;
+  display: flex;
+  gap: 4px;
+  padding: 0;
+  cursor: pointer;
+  width: fit-content;
+
+  &Text {
+    display: flex;
+    align-items: center;
+  }
+
+  &Arrow {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../../../../../assets/icons/icon-arrow-left-grey.svg);
+    height: 14px;
+    width: 12px;
+
+    &Dark {
+      background-image: url(../../../../../assets/icons/icon-arrow-left-white.svg);
+    }
+  }
+
+  &:hover {
+    color: var(--color-accent);
+
+    .backArrow {
+      background-image: url(../../../../../assets/icons/icon-arrow-left-purple.svg);
+    }
+  }
+}

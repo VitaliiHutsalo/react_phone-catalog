@@ -1,0 +1,50 @@
+@use './variables' as *;
+
+@mixin on-tablet {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin on-desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin content-padding-in-line() {
+  padding-inline: 16px;
+
+  @include on-tablet {
+    padding-inline: 24px;
+  }
+
+  @include on-desktop {
+    max-width: 1136px;
+    padding-inline: 32px;
+    margin-inline: auto;
+  }
+}
+
+@mixin img-hover-scale($scale: 1.1, $transition: 0.3s) {
+  transition: transform $transition ease;
+
+  &:hover {
+    transform: scale($scale);
+  }
+}
+
+@mixin grid-layout {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+
+  @include on-tablet {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  @include on-desktop {
+    grid-template-columns: repeat(24, 32px);
+    justify-content: center;
+  }
+}

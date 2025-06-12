@@ -1,0 +1,106 @@
+@import '../../../App.scss';
+
+.info {
+  grid-column: 1 / -1;
+  margin-bottom: 56px;
+
+  @include on-tablet {
+    grid-column: 8 / -1;
+    margin-bottom: 64px;
+  }
+  @include on-desktop {
+    grid-column: 14 / 21;
+    margin-bottom: 80px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  &Block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+
+    &Text {
+      color: var(--color-text-secondary);
+    }
+
+    &Buttons {
+      display: flex;
+      gap: 8px;
+
+      &Capacity {
+        padding-inline: 8px;
+        border: 1px solid var(--color-icon);
+        cursor: pointer;
+        height: 32px;
+
+        &:not([disabled]):hover {
+          background-color: var(--color-element);
+        }
+
+        &:disabled {
+          color: var(--color-bg);
+          background-color: var(--color-text-main);
+          cursor: default;
+        }
+      }
+    }
+
+    &Control {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  &Prices {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    &Full {
+      text-decoration: line-through;
+      color: var(--color-text-secondary);
+      font-weight: 600;
+      font-size: 22px;
+    }
+  }
+
+  &Buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+
+    &Default {
+      flex: 1 1 auto;
+      height: 48px;
+    }
+
+    &Favourite {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+    }
+  }
+
+  &Main {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 0;
+
+    &Text {
+      display: flex;
+      justify-content: space-between;
+      color: var(--color-text-secondary);
+    }
+
+    &Text span {
+      color: var(--color-text-main);
+    }
+  }
+}

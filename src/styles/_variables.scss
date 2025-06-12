@@ -1,0 +1,43 @@
+// Breakpoints
+$breakpoint-desktop: 1200px;
+$breakpoint-tablet: 640px;
+
+:root {
+  --color-bg: #f1f2f9;
+  --color-surface: #dce0e3;
+  --color-card: #bbbbbb;
+
+  // Text
+  --color-text-main: #0f0f11;
+  --color-text-buttons: #f1f2f9;
+  --color-text-secondary: #89939a;
+
+  // UI
+  --color-icon: #5694f0;
+  --color-element: #a1a3a6;
+
+  // Accents
+  --color-accent: #4219d0;
+  --color-success: #27ae60;
+  --color-error: #eb5757;
+}
+
+html[data-theme='dark'] {
+  --color-bg: #0f1121;
+  --color-surface: #161827;
+  --color-card: #323542;
+
+  // Text
+  --color-text-main: #f1f2f9;
+  --color-text-buttons: #f1f2f9;
+  --color-text-secondary: #75767f;
+
+  // UI
+  --color-icon: #4a4d58;
+  --color-element: #3b3e4a;
+
+  // Accents
+  --color-accent: #905bff;
+  --color-success: #27ae60;
+  --color-error: #eb5757;
+}

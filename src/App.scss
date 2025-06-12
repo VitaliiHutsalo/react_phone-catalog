@@ -1,1 +1,19 @@
-// not empty
+@import './styles/reset';
+@import './styles/fonts';
+@import './styles/global';
+@import './styles/mixins';
+@import './styles/variables';
+
+iframe {
+  display: none;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.footer {
+  margin-top: auto;
+}

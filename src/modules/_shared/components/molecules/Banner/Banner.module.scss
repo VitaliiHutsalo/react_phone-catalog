@@ -1,0 +1,169 @@
+@import './../../../../../App.scss';
+
+.banner {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include on-tablet {
+    min-height: 189px;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  &Image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  &Overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+
+    @include on-tablet {
+      height: 70%;
+    }
+
+    @include on-desktop {
+      height: 100%;
+    }
+    // justify-content: center;
+  }
+
+  &Content {
+    position: relative;
+    z-index: 2;
+    padding-inline: 20px;
+    max-width: 1200px;
+    text-align: center;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-self: center;
+    background: linear-gradient(
+      to bottom,
+      rgb(15, 17, 33) 50%,
+      rgba(19, 8, 8, 0) 100%
+    );
+
+    @include on-tablet {
+      margin: 15px;
+      padding-left: 30px;
+      padding-top: 15px;
+      width: 40%;
+      text-align: left;
+      background-color: rgba(74, 77, 88, 0.9);
+      border-radius: 15px;
+    }
+    @include on-desktop {
+      height: 80%;
+      padding-left: 50px;
+    }
+  }
+
+  &Title {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: 24px;
+    color: #1a06f4;
+    line-height: 1;
+    background: linear-gradient(to right, #4535f1fc, #930eec);
+    -webkit-background-clip: text;
+    color: transparent;
+
+    @include on-tablet {
+      margin-top: 0;
+      margin-bottom: 0;
+      align-self: flex-start;
+    }
+    @include on-tablet {
+      margin-top: 0;
+      margin-bottom: 0;
+      align-self: flex-start;
+    }
+
+    @include on-desktop {
+      font-size: 32px;
+    }
+  }
+  &Emoji {
+    display: none;
+    color: yellow;
+
+    @include on-tablet {
+      display: inline;
+      margin-left: 8px;
+    }
+  }
+
+  &DesktopContent {
+    display: none;
+    margin-top: 8px;
+
+    @include on-tablet {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+      padding-bottom: 30px;
+    }
+
+    @include on-desktop {
+      padding-bottom: 50px;
+    }
+  }
+
+  &Text {
+    color: #bfbfc9;
+    padding-bottom: 50px;
+  }
+
+  &Button {
+    padding: 5px 5%;
+
+    font-size: 8px;
+    width: 150px;
+    background-color: inherit;
+    border: none;
+    border-radius: 50px;
+    border: 1px solid var(--color-text-secondary);
+    color: var(--color-text-main);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+
+    @include img-hover-scale;
+
+    @include on-desktop {
+      padding: 15px 15px;
+      font-size: 14px;
+      width: 150px;
+    }
+  }
+}
+.clickableMobile {
+  cursor: pointer;
+
+  @include on-tablet {
+    cursor: default;
+    pointer-events: none;
+
+    button {
+      pointer-events: auto;
+    }
+  }
+}

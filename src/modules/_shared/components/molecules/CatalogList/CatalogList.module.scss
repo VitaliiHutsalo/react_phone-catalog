@@ -1,0 +1,16 @@
+@import '../../../../../App.scss';
+.CatalogListContainer {
+  @include grid-layout;
+
+  row-gap: 40px;
+
+  grid-template-columns: repeat(auto-fit, minmax(228px, 1fr));
+
+  @include on-tablet {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1050px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

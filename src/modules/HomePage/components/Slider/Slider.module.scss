@@ -1,0 +1,70 @@
+@use '../../../../App.scss' as *;
+
+.sliderComponentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sliderRow {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  max-height: 352px;
+  height: 100%;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.customSliderSwiper {
+  flex-grow: 1;
+  flex-shrink: 1;
+  aspect-ratio: 1 / 1;
+  height: 100%;
+
+  @include on-tablet {
+    max-height: 221px;
+    aspect-ratio: auto;
+  }
+
+  @include on-desktop {
+    max-height: 432px;
+  }
+}
+
+.customPagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.customPaginationBullet {
+  width: 14px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--color-element);
+  opacity: 0.6;
+  margin: 0 5px;
+  cursor: pointer;
+  transition:
+    opacity 0.3s,
+    background 0.3s;
+}
+
+.active {
+  background: var(--color-text-main);
+  opacity: 1;
+}
+
+.arrowButtonWrapper {
+  display: none;
+
+  @include on-tablet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 32px;
+  }
+}

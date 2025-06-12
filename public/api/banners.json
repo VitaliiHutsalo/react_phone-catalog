@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Discover accessories | for your gadgets!",
+    "img": "/img/banner-accessories.png",
+    "description": "Find something special!",
+    "alt": "Accessories",
+    "to": "/accessories"
+  },
+  {
+    "title": "Check out | our latest phones!",
+    "img": "/img/banner-phones.png",
+    "description": "Top models available now",
+    "alt": "Phones",
+    "to": "/phones"
+  },
+  {
+    "title": "Explore tablets | with best features!",
+    "img": "/img/banner-tablets.png",
+    "description": "Perfect for work and fun",
+    "alt": "Tablets",
+    "to": "/tablets"
+  }
+]

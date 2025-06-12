@@ -1,0 +1,45 @@
+@import '../../../../../App.scss';
+
+.linesWrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cartIconWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-direction: row-reverse;
+}
+
+.cartIcon {
+  svg {
+    width: 28px;
+    height: 28px;
+    display: block;
+    order: 2;
+  }
+}
+
+.line {
+  height: 10px;
+  width: 30px;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  transform-origin: top;
+  flex-shrink: 0;
+}
+
+.line1 {
+  order: 1;
+}

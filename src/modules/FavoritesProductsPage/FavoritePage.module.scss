@@ -1,0 +1,89 @@
+@import '../../App.scss';
+
+.favouritePage {
+  @include content-padding-in-line();
+  @include grid-layout;
+  margin-top: 24px;
+  margin-bottom: 56px;
+
+  @include on-tablet {
+    margin-bottom: 64px;
+  }
+
+  @include on-desktop {
+    margin-bottom: 80px;
+  }
+
+  &Quantity {
+    margin-bottom: 16px;
+    grid-column: 1/-1;
+
+    @include on-tablet {
+      margin-bottom: 24px;
+    }
+
+    &Title {
+      margin-bottom: 8px;
+    }
+
+    &Items {
+      color: var(--color-text-secondary);
+    }
+  }
+
+  &List {
+    grid-column: 1/-1;
+  }
+
+  &Empty {
+    grid-column: 1/ -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    @include on-tablet {
+      gap: 24px;
+    }
+
+    &Image {
+      max-width: 40%;
+
+      &Dark {
+        filter: invert(99%) sepia(24%) saturate(4305%) hue-rotate(180deg)
+          brightness(110%) contrast(93%);
+      }
+    }
+
+    &Button {
+      width: 80%;
+      height: 48px;
+      max-width: 495px;
+    }
+  }
+}
+
+.breadcrumbsContainer {
+  grid-column: 1/-1;
+  margin-bottom: 8px;
+
+  @include on-tablet {
+    margin-bottom: 24px;
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &Separator {
+    rotate: 180deg;
+  }
+
+  &Current {
+    font-weight: 700;
+    color: var(--color-text-secondary);
+  }
+}

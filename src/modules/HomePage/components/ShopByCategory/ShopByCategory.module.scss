@@ -1,0 +1,73 @@
+@use '../../../../App.scss' as *;
+
+.shopByCategory {
+  row-gap: 24px;
+
+  &Title {
+    grid-column: 1 / -1;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+
+  &Container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 16px;
+    }
+  }
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  color: var(--color-text-main);
+  cursor: pointer;
+  row-gap: 24px;
+
+  &ImageWrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &Image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 125%;
+    height: 125%;
+    object-fit: cover;
+    object-position: top left;
+
+    @include img-hover-scale;
+  }
+
+  &Title {
+    margin-bottom: 4px;
+  }
+
+  &Count {
+    color: var(--color-text-secondary);
+  }
+
+  &Phones &ImageWrapper {
+    background-color: #ffe6cc;
+  }
+
+  &Tablets &ImageWrapper {
+    background-color: #817b7b;
+  }
+
+  &Accessories &ImageWrapper {
+    background-color: #964155;
+  }
+}

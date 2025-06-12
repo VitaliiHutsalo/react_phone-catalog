@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Mobile phones",
+    "count": "124 models",
+    "img": "/img/category-phones.png",
+    "alt": "Mobile phones",
+    "modifier": "categoryPhones",
+    "link": "/phones"
+  },
+  {
+    "title": "Tablets",
+    "count": "36 models",
+    "img": "/img/category-tablets.png",
+    "alt": "Tablets",
+    "modifier": "categoryTablets",
+    "link": "/tablets"
+  },
+  {
+    "title": "Accessories",
+    "count": "34 models",
+    "img": "/img/category-accessories.png",
+    "alt": "Accessories",
+    "modifier": "categoryAccessories",
+    "link": "/accessories"
+  }
+]

@@ -1,0 +1,160 @@
+@use '../../../../../App.scss' as *;
+
+//sticky header
+.header {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 1px 0px 0px var(--color-element);
+  height: 48px;
+  z-index: 10;
+
+  @include on-desktop {
+    height: 64px;
+  }
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+
+  @include on-desktop {
+    gap: 24px;
+  }
+}
+
+.headerLogo {
+  display: flex;
+  align-items: center;
+  padding-inline: 16px;
+
+  @include on-desktop {
+    padding-inline: 24px;
+  }
+  @include img-hover-scale(1.1);
+}
+
+.headerNav {
+  flex: 2 1 auto;
+}
+
+.headerIcons {
+  display: flex;
+  height: 100%;
+}
+
+//Logo
+.logoLink {
+  display: flex;
+  align-items: center;
+
+  &Img {
+    width: 64px;
+    height: auto;
+
+    @include on-desktop {
+      width: 80px;
+    }
+  }
+}
+
+//navigation
+.nav {
+  display: flex;
+  align-items: center;
+
+  &List {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    column-gap: 32px;
+
+    @include on-desktop {
+      column-gap: 64px;
+    }
+  }
+
+  &Link {
+    display: none;
+    align-items: center;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+
+    @include on-tablet {
+      display: flex;
+      height: 48px;
+    }
+
+    @include on-desktop {
+      height: 64px;
+    }
+
+    &:hover {
+      color: var(--color-text-main);
+    }
+  }
+}
+
+//is-active
+.isActive {
+  position: relative;
+  color: var(--color-text-main);
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    background: var(--color-text-main);
+  }
+}
+
+//icon(only on tablet+)
+.icon {
+  display: none;
+
+  @include on-tablet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 100%;
+    box-shadow: -1px 0 0 0 var(--color-element);
+    text-decoration: none;
+  }
+  @include on-desktop {
+    width: 64px;
+  }
+}
+
+//icon Burger menu (only on mobile)
+.iconBurgerMenu {
+  display: block;
+  width: 48px;
+  height: 100%;
+  background: url('../../../../../assets/icons/icon-burger-menu-dark.svg')
+    center/16px no-repeat;
+  background-color: transparent;
+  border: none;
+  box-shadow: -1px 0px 0px 0px var(--color-element);
+  cursor: pointer;
+
+  @include on-tablet {
+    display: none;
+  }
+
+  &Dark {
+    background: url('../../../../../assets/icons/icon-burger-menu.svg')
+      center/16px no-repeat;
+  }
+}

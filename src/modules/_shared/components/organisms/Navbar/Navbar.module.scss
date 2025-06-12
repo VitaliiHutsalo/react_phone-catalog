@@ -1,0 +1,178 @@
+@use '../../../../../App.scss' as *;
+
+// Menu container (fixed position)
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 999;
+
+  height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg);
+  @include on-tablet {
+    display: none;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+}
+
+// Top section of the menu
+.menuTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-element);
+}
+
+//Logo
+.logoLink {
+  padding-inline: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+
+  .logo {
+    width: 64px;
+    height: auto;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+// Header icons on the top menu
+.headerIcons {
+  display: flex;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.iconClose {
+  background-image: url('../../../../../assets/icons/icon-close-grey.svg');
+  background-color: transparent;
+  background-size: 16px 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  box-shadow: -1px 0px 0px 0px var(--color-element);
+  transition: background-color 0.2s ease;
+
+  &Dark {
+    background-image: url('../../../../../assets/icons/icon-close.svg');
+  }
+}
+
+// Bottom section of the menu
+.menuBottom {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+//navigation
+.nav {
+  &List {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    gap: 16px;
+  }
+
+  &Item {
+    margin-bottom: 8px;
+    margin-top: 8px;
+  }
+
+  &Link {
+    text-decoration: none;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--color-text-main);
+    }
+  }
+}
+
+//is-active
+.isActive {
+  position: relative;
+  color: var(--color-text-main);
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -6px;
+    background: var(--color-text-main);
+    transition: background 0.3s ease;
+  }
+}
+
+// Icons at the bottom of the menu
+.menuIcons {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--color-element);
+  height: 64px;
+
+  .icon {
+    position: relative;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    border-left: 1px solid var(--color-element);
+    text-decoration: none;
+
+    &:first-child {
+      border-left: none;
+    }
+
+    &.isActive::after {
+      content: '';
+      position: absolute;
+      z-index: 10000;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 3px;
+      background-color: var(--color-text-main);
+    }
+  }
+}

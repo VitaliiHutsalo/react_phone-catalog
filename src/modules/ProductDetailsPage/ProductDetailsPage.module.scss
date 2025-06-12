@@ -1,0 +1,76 @@
+@import '../../App.scss';
+
+.productDetail {
+  @include content-padding-in-line();
+  @include grid-layout;
+  row-gap: 0;
+  margin-top: 24px;
+  margin-bottom: 56px;
+
+  @include on-tablet {
+    margin-bottom: 64px;
+  }
+
+  @include on-desktop {
+    margin-bottom: 80px;
+  }
+
+  &Head {
+    grid-column: 1 / -1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 32px;
+
+    @include on-tablet {
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &Title {
+    grid-column: 1 / -1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &NoProduct {
+    grid-column: 1/ -1;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    max-width: 80%;
+
+    @include on-tablet {
+      gap: 24px;
+    }
+
+    &Text {
+      max-width: 300px;
+      text-align: center;
+    }
+
+    &Image {
+      max-width: 100%;
+      max-height: 300px;
+    }
+
+    &Button {
+      width: 80%;
+      height: 48px;
+      max-width: 495px;
+    }
+  }
+}
+
+hr {
+  width: 100%;
+  border-color: var(--color-element);
+  margin: 0;
+}
