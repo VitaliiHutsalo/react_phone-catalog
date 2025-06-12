@@ -54,7 +54,8 @@
     "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
     "format": "prettier --write \"src/**/*.{ts,tsx,scss,css,json,md}\"",
     "stylelint": "stylelint \"src/**/*.{css,scss}\"",
-    "prepare": "husky"
+    "prepare": "husky",
+    "deploy": "mate-scripts deploy"
   },
   "browserslist": {
     "production": [
